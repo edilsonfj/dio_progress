@@ -3,8 +3,8 @@ import { clsx } from 'clsx'
 
 export function Card ({ children , className }: ICard) {
   return(
-    <div className={clsx('flex flex-col items-center bg-purple-50/5 rounded-xl border-solid border-2 border-purple-900' , className)}>
+    <section className={clsx('flex flex-col items-center bg-purple-50/5 rounded-xl border-solid border-2 border-purple-900' , className)}>
       {children}
-    </div>
+    </section>
   )
 }

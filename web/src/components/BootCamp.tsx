@@ -3,11 +3,11 @@ import Icon from '@mdi/react'
 import { mdiNotebookCheck , mdiTimerPlay , mdiSignalCellular1 } from '@mdi/js'
 import { clsx } from 'clsx'
 
-export function BootCampRoot ({children}: IBootCampRoot) {
+export function BootCampRoot ({children , href }: IBootCampRoot) {
   return(
-    <div className="w-[560px] h-[96px] px-10 py-4 flex flex-row items-center justify-between bg-gradient rounded-xl">
+    <a href={href} className="w-[560px] h-[96px] px-10 py-4 flex flex-row items-center justify-between bg-gradient rounded-xl">
       {children}
-    </div>
+    </a>
   )
 }
 BootCampRoot.displayName = 'BootCamp.Root'
@@ -41,7 +41,7 @@ BootCampInfo.displayName = 'BootCamp.Info'
 export function BootCampDescription ({ curses,
   hours, levels }: IBootCampDescription) {
   return(
-    <div className="flex flex-col items-start justify-center gap-0.5">
+    <article className="flex flex-col items-start justify-center gap-0.5">
       <div className="flex flex-row items-center justify-start gap-1">
         <Icon path={mdiNotebookCheck } size={0.8} color="#4C1D95"/>
         <span className="font-sans font-bold text-xs text-purple-50">{curses}</span>
@@ -54,7 +54,7 @@ export function BootCampDescription ({ curses,
         <Icon path={mdiSignalCellular1} size={0.8} color="#4C1D95"/>
         <span className="font-sans font-bold text-xs text-purple-50">{levels}</span>
       </div>
-    </div>
+    </article>
   )
 }
 BootCampDescription.displayName = 'BootCamp.Description'

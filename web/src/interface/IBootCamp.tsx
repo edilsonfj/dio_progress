@@ -1,7 +1,8 @@
 import { ReactNode , ImgHTMLAttributes } from 'react'
 
 export interface IBootCampRoot {
-  children: ReactNode
+  children: ReactNode,
+  href: string
 }
 
 export interface IBootCampLogo extends ImgHTMLAttributes<HTMLImageElement>{
